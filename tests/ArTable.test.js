@@ -26,7 +26,7 @@ describe('Ar Table', () => {
 
   it('should display grid date on the fly with sorting', () => {
     let el = wrapper.find("table");
-    expect(el).toHaveLength(2);
+    expect(el).toHaveLength(1);
     el.find('span').last().simulate("click");
     el.find('.sort-by').last().simulate("click");
   });

@@ -1,6 +1,0 @@
-{
-  "presets": [
-      
-  ],
-  "plugins": ["transform-object-rest-spread"] 
-}
