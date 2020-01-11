@@ -10,6 +10,7 @@ describe('Ar Table', () => {
   let props;
   let wrapper;
   let useState;
+  let activeIndex;
 
   beforeEach(() => {
       useState = jest.spyOn(React, "useState")
@@ -17,7 +18,7 @@ describe('Ar Table', () => {
         arItems: [{"id": 1, "description": "Strawberries", "observationDate" : "2018-01-01", "severity": 10},
         {"id": 2, "description": "Strawberries", "observationDate" : "2018-01-01", "severity": 9}]
       };
-      wrapper = shallow(<ArTable {...props} />);
+      wrapper = shallow(<ArTable {...props} activeIndex={activeIndex}/>);
   });
 
   it('should render a Table component', () => {
@@ -26,9 +27,14 @@ describe('Ar Table', () => {
 
   it('should display grid date on the fly with sorting', () => {
     let el = wrapper.find("table");
-    expect(el).toHaveLength(1);
     el.find('span').last().simulate("click");
-    el.find('.sort-by').last().simulate("click");
+    expect(el).toHaveLength(1);
+    activeIndex = 0;  
   });
-  
+
+  it("should sort items", ()=> {    
+    let el = wrapper.find("table");
+    el.find('.sort-by').last().simulate("click");
+  })
+ 
 });

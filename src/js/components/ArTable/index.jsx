@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
-export const ArTable = ({ arItems }) => {
+export const ArTable = ({ arItems, activeIndex }) => {
   const [ activePanel, setActivePanel ] = useState({
-    index: null,
+    index: activeIndex,
     isAsc: false
   });
 
@@ -21,7 +21,7 @@ export const ArTable = ({ arItems }) => {
     });
   };
 
-  const reactions = arItems; 
+  const reactions = arItems;
   const arReactions = {};
   reactions.forEach((reaction) => {
     arReactions[reaction.description] = arReactions[reaction.description] ? [...arReactions[reaction.description], reaction] : [reaction];
