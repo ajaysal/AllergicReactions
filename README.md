@@ -1,5 +1,11 @@
 Allergic reactions app
 
+Created two primary react based components:
+
+The first is a form to record data about allergic reactions.  The form will allow the entry of an allergic reaction with the following information – description (text), observationDate (text or date component), and severity (e.g. 1-10 as a dropdown). 
+
+The second react component is a data grid that displays the information.  The data grid will group records in a collapsible format by description (or id, if using a surrogate identifier).  The groupings will dynamically sorted based on the maximum of the severity of the reaction. And when the grouping is expanded it will display individual records and toggle the sort by date or severity. 
+
 -----------------------------------
 
 steps to run the application
