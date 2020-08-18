@@ -1,6 +1,6 @@
 Allergic reactions app
 
-Created two primary react based components:
+Created two components:
 
 The first is a form to record data about allergic reactions.  The form will allow the entry of an allergic reaction with the following information – description (text), observationDate (text or date component), and severity (e.g. 1-10 as a dropdown). 
 
